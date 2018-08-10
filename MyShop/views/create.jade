@@ -1,0 +1,17 @@
+extends layout
+block content
+    .row
+    .formHold
+    .container
+       h1.itemtitle Book Form
+       form(method="post")
+        fieldset
+         label(for="name") Book Name:
+         input(name="name", type="text", placeholder="Please Name The Book") 
+         label(for="price") Book Price:
+         input(name="price", type="text", placeholder="Please set the price for the Book") 
+         label(for="image") Book Image:
+         input(name="image", type="text", placeholder="Please give an image for the Book") 
+         label(for="author") Book Author:
+         input(name="author", type="text", placeholder="Please choose the Author") 
+         button.button(type="submit") Create The Product

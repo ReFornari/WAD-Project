@@ -1,0 +1,15 @@
+extends layout
+block content
+       .container
+        .grid-container 
+          each row in res1
+           .item
+            .h1.itemtitle #{row.Name}
+             img.pimage(src="#{row.Image}", alt="#{row.Image}")
+             p.itemp Price: &euro;#{row.Price}
+             p.itemp Author: #{row.Author}
+             a.button(href="item/#{row.Id}") Show
+             a.button(href="edit/#{row.Id}") Edit
+             a.button(href="delete/#{row.Id}") Delete #{row.Name}
+             
+

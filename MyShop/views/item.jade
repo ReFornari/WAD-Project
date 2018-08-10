@@ -1,0 +1,11 @@
+extends layout
+block content
+        h1 Books Page
+        .grid-container 
+          each row in res1
+           .item
+            .h1.itemtitle #{row.Name}
+             img.pimage(src="../#{row.Image}", alt="#{row.Image}")
+             p.itemp Price: &euro;#{row.Price}
+             p.itemp Author: #{row.Author}
+             a.button(href="item/#{row.Id}") Show

@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title Bookstore | Welcome
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='../app.css', type='text/css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', type='text/javascript')
+    script(src='../script.js', type='text/javascript')
+  body
+    header.top
+      .container
+        #branding.branding
+          h1
+            a.logoLink(href='index.html')
+              span.highlight My
+              | Book
+        nav.navbar
+          ul
+            li.current
+              a.navButton(href='/') Home
+            li
+              a.navButton(href='/books') Books
+            li
+              a.navButton(href='/create') New Book
+            li  
+              a.navButton(href='/reviews') Reviews
+            li  
+              a.navButton(href='/add') Leave Reviews
+            li 
+              a.navButton(href='/contact') Contact
+            
+    section#showcase
+      .container
+        img.homeImage(src='../book.jpg')
+        form(method="post" action="/search")
+          label(for="search")
+          input(name="search", type="text", Placeholder="Search For...") 
+          button.button(type="submit") Search
+       block content
+      footer
+        p © 2018 MyBook, Copyright
+        
+        

@@ -1,0 +1,13 @@
+extends layout
+block content
+    .row
+    .formHold
+    .container
+       h1.itemtitle Review Form
+       form(method="post")
+        fieldset
+         label(for="name") Name:
+         input(name="name", type="text", placeholder="Your Name") 
+         label(for="content") Book:
+         input(name="content", type="text", placeholder="Review") 
+         button.button(type="submit") Create The Product

@@ -1,0 +1,17 @@
+extends layout
+block content
+    .row
+    .formHold
+       h1.itemtitle Book Form
+     each row in res1
+      form(method="post")
+        fieldset
+         label(for="name") Book Name:
+         input(name="name", type="text", value="#{row.Name}") 
+         label(for="price") Book Price:
+         input(name="price", type="text", value="#{row.Price}") 
+         label(for="image") Book Image:
+         input(name="image", type="text", value="#{row.Image}") 
+         label(for="author") Book Author:
+         input(name="author", type="text", value="#{row.Author}") 
+         button.button(type="submit") Create The Product
